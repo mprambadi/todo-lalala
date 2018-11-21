@@ -1,13 +1,13 @@
 {
-  "main.css": "/todo-lalala/static/css/main.9f5684c3.chunk.css",
-  "main.js": "/todo-lalala/static/js/main.bef2067a.chunk.js",
-  "main.js.map": "/todo-lalala/static/js/main.bef2067a.chunk.js.map",
-  "static/js/1.65979449.chunk.js": "/todo-lalala/static/js/1.65979449.chunk.js",
-  "static/js/1.65979449.chunk.js.map": "/todo-lalala/static/js/1.65979449.chunk.js.map",
+  "main.css": "/todo-lalala/static/css/main.133667aa.chunk.css",
+  "main.js": "/todo-lalala/static/js/main.09790b57.chunk.js",
+  "main.js.map": "/todo-lalala/static/js/main.09790b57.chunk.js.map",
+  "static/js/1.2752a4ea.chunk.js": "/todo-lalala/static/js/1.2752a4ea.chunk.js",
+  "static/js/1.2752a4ea.chunk.js.map": "/todo-lalala/static/js/1.2752a4ea.chunk.js.map",
   "runtime~main.js": "/todo-lalala/static/js/runtime~main.e5b71d14.js",
   "runtime~main.js.map": "/todo-lalala/static/js/runtime~main.e5b71d14.js.map",
-  "static/css/main.9f5684c3.chunk.css.map": "/todo-lalala/static/css/main.9f5684c3.chunk.css.map",
+  "static/css/main.133667aa.chunk.css.map": "/todo-lalala/static/css/main.133667aa.chunk.css.map",
   "index.html": "/todo-lalala/index.html",
-  "precache-manifest.29bd255f1e57f48554ed343826830ac7.js": "/todo-lalala/precache-manifest.29bd255f1e57f48554ed343826830ac7.js",
+  "precache-manifest.60ee61b6b52f06dc297431b386b38e48.js": "/todo-lalala/precache-manifest.60ee61b6b52f06dc297431b386b38e48.js",
   "service-worker.js": "/todo-lalala/service-worker.js"
 }
