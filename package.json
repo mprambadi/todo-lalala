@@ -18,7 +18,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-app-rewired eject",
-    "deploy":"gh-page -d build",
+    "deploy":"gh-pages -d build",
     "predeploy":"npm run build"
   },
   "eslintConfig": {
