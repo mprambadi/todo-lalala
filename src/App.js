@@ -1,28 +1,89 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { hot } from "react-hot-loader";
+import "./App.scss";
+import users from "./users";
+// import {appStyle, lainStyle} from "./component/style/";
 
 class App extends Component {
+  state = {
+    nama: "",
+    fullName: "",
+    shortName: "",
+    todos: [],
+    todo: "",
+    page: 0,
+    edit: ""
+  };
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handlePagination = () => {
+    this.setState(state => ({
+      page: state.page + 1
+    }));
+  };
+
+  handleInput = e => {
+    if (e.key === `Enter` && this.state.todo) {
+      this.setState(state => {
+        return {
+          todos: [
+            ...state.todos,
+            { id: Date.now(), name: state.todo, status: false, edit: false }
+          ],
+          todo: ""
+        };
+      });
+    }
+  };
+
+  handleEdit = item => {
+      console.log(item)
+    this.setState(state => ({
+      todos: state.todos.map(todo =>
+        todo.id === item.id ? { ...todo, ...item } : todo
+      )
+    }));
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="items">
+        <div className="items-column">
+          <input
+            name="todo"
+            value={this.state.todo}
+            onChange={this.handleChange}
+            onKeyPress={this.handleInput}
+          />
+          <div>
+            {this.state.todos.map(todo => (
+              <div
+                key={todo.id}
+                className="items-content"
+                onDoubleClick={() =>
+                  this.handleEdit({ id: todo.id, edit: !todo.edit })
+                }
+              >
+                {todo.edit ? (
+                  <input
+                    autoFocus
+                    onBlur={() =>
+                      this.handleEdit({ id: todo.id, edit: !todo.edit })
+                    }
+                  />
+                ) : (
+                  <div>{todo.name}</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-export default App;
+export default hot(module)(App);
